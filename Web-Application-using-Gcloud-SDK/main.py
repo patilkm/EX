@@ -13,6 +13,7 @@ class MainPage(webapp2.RequestHandler):
 
     def post(self):
         pincode = self.request.get('zipCode')
+        print(pincode)
         if not pincode.isnumeric() or not len(pincode) == 6:
             template_values = {
                 "error": "Incorrect Pin Code (String / False Code entered)"
